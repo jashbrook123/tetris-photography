@@ -6,6 +6,7 @@ points_dist = {"1":100,
               "2":250,
               "3":500,
               "4":1000}
+
 tetrominoes = {
     "I": [
         [1, 1, 1, 1]
@@ -77,12 +78,6 @@ def clear_lines(board):
         temp_grid.insert(0,[0]*board.width)  
     board.grid = temp_grid
     return cleared
-
-def get_input():
-    if msvcrt.kbhit(): return msvcrt.getch()
-    return None
-
-
 
 class Board:
     def __init__(self):
